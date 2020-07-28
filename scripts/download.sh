@@ -15,13 +15,15 @@ wget $NLVR/dev.json -P $DOWNLOAD/ann/
 wget $NLVR/test1.json -P $DOWNLOAD/ann/
 
 # image dbs
-for SPLIT in 'train' 'dev' 'test'; do
+#for SPLIT in 'train' 'dev' 'test'; do
+for SPLIT in 'dev' 'test'; do
     wget $BLOB/img_db/nlvr2_$SPLIT.tar -P $DOWNLOAD/img_db/
     tar -xvf $DOWNLOAD/img_db/nlvr2_$SPLIT.tar -C $DOWNLOAD/img_db
 done
 
 # test dbs
-for SPLIT in 'train' 'dev' 'test1'; do
+#for SPLIT in 'train' 'dev' 'test1'; do
+for SPLIT in 'dev' 'test1'; do
     wget $BLOB/txt_db/nlvr2_$SPLIT.db.tar -P $DOWNLOAD/txt_db/
     tar -xvf $DOWNLOAD/txt_db/nlvr2_$SPLIT.db.tar -C $DOWNLOAD/txt_db
 done
