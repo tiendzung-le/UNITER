@@ -27,6 +27,9 @@ def save_training_meta(args):
     model_config = json.load(open(args.model_config))
     with open(join(args.output_dir, 'log', 'model.json'), 'w') as writer:
         json.dump(model_config, writer, indent=4)
+        
+    return # no need to store git info
+
     # git info
     try:
         LOGGER.info("Waiting on git info....")
