@@ -130,7 +130,7 @@ def main(opts):
         TB_LOGGER.create(join(opts.output_dir, 'log'))
         pbar = tqdm(total=opts.num_train_steps)
         model_saver = ModelSaver(join(opts.output_dir, 'ckpt'))
-        os.makedirs(join(opts.output_dir, 'results'))  # store val predictions
+        #os.makedirs(join(opts.output_dir, 'results'))  # store val predictions
         add_log_to_file(join(opts.output_dir, 'log', 'log.txt'))
     else:
         LOGGER.disabled = True
